@@ -1,6 +1,7 @@
 package com.spring.cruddemo.dao;
 
 import com.spring.cruddemo.entity.Instructor;
+import com.spring.cruddemo.entity.InstructorDetail;
 import jakarta.persistence.EntityManager;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
