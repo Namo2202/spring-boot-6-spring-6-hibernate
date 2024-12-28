@@ -26,13 +26,23 @@ public class CruddemoApplication {
 //			deleteInstructor(appDAO);
 //			findInstructorDetail(appDAO);
 //			deleteInstructorDetail(appDAO);
-			createInstructorWithCourses(appDAO);
+//			createInstructorWithCourses(appDAO);
 //			findInstructorWithCourses(appDAO);
 //			findCoursesForInstructor(appDAO);
 //			findInstructorWithCoursesJoinFetch(appDAO);
 //			updateInstructor(appDAO);
 //			updateCourse(appDAO);
+			deleteCourseById(appDAO);
 		};
+	}
+
+	private void deleteCourseById(AppDAO appDAO) {
+		int theId=10;
+		System.out.println("Deleting course id: " + theId);
+
+		appDAO.deleteCourseById(theId);
+
+		System.out.println("Done!");
 	}
 
 	private void updateCourse(AppDAO appDAO) {
