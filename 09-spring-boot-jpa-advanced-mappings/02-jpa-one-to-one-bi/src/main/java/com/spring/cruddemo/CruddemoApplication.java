@@ -21,8 +21,18 @@ public class CruddemoApplication {
 //			createInstructor(appDAO);
 //			findInstructor(appDAO);
 //			deleteInstructor(appDAO);
-			findInstructorDetail(appDAO);
+//			findInstructorDetail(appDAO);
+			deleteInstructorDetail(appDAO);
 		};
+	}
+
+	private void deleteInstructorDetail(AppDAO appDAO) {
+		int theId=2;
+		System.out.println("Deleting instructor detail id: " + theId);
+
+		appDAO.deleteInstructorDetailById(theId);
+
+		System.out.println("Done!");
 	}
 
 	private void findInstructorDetail(AppDAO appDAO) {
@@ -54,10 +64,10 @@ public class CruddemoApplication {
 
 	private void createInstructor(AppDAO appDAO) {
 		// create the instructor
-		Instructor tempInstructor = new Instructor("Tasmia", "Tahmid", "namo@gmail.com");
+		Instructor tempInstructor = new Instructor("Leo", "Das", "leo@das.com");
 
 		// create the instructor detail
-		InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.google.com", "Drawing");
+		InstructorDetail tempInstructorDetail = new InstructorDetail("http://www.google.com", "killing it");
 
 		// associate the objects
 		tempInstructor.setInstructorDetail(tempInstructorDetail);
