@@ -1,5 +1,7 @@
 package com.springboot.aopdemo.dao;
 
+import com.springboot.aopdemo.Account;
+
 public interface AccountDAO {
-    void addAccount();
+    void addAccount(Account theAccount);
 }
