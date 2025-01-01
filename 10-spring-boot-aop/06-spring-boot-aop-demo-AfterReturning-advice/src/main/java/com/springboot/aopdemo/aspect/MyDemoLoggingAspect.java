@@ -25,6 +25,17 @@ public class MyDemoLoggingAspect {
         System.out.println("\n =====>>> Executing @AfterReturning on method: "+method);
 
         System.out.println("\n=====>>> result is: "+ result);
+
+        convertAccountNameToUpperCase(result);
+
+        System.out.println("\n=====>>> result is: "+ result);
+    }
+
+    private void convertAccountNameToUpperCase(List<Account> result) {
+        for (Account tempAccount : result) {
+            String theUpperName = tempAccount.getName().toUpperCase();
+            tempAccount.setName(theUpperName);
+        }
     }
 
     @Before("com.springboot.aopdemo.aspect.LuvAOPExpressions.forDaoPackageNoGetterSetter()")
